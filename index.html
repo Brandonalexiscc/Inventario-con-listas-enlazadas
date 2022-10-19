@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <script type="module" src="inventario2.js"></script>
+
+    <title>Inventario</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-white">
+        <a href="" class="navbar-brand text.center">
+            Inventario
+        </a>
+    </nav>
+    <div class="arreglos">
+
+        <form id="buscarcodigo">
+
+    <div class="buscar">
+        <input type="text" placeholder="Buscar código" id="buscarCodigo">
+        <button type="button" value="Buscar"  id="buscar-Codigo" class="btn btn-primary btn-block">
+            Buscar
+        </button>
+        </div>
+        </form>
+
+        <form id="eliminar-Codigo">
+
+    <div class="borrar">
+        <input type="text" placeholder="Eliminar producto por código" id="codigoEliminar">
+        <button type="button" id="eliminar" value="Eliminar" class="btn btn-primary btn-block">
+            Eliminar
+        </button>
+        </form>
+
+    </div>    
+    </div>
+    <br>
+    <br>
+    <div class="insertarPosicion">
+        <input type="text" placeholder="Insertar producto en nueva posicion" id="insertarPosicion" required>
+        <button type="button" value="posicion" class="btn btn-primary btn-block">
+            Producto nuevo
+        </button>    
+    </div>
+    </div>        
+    <br>
+    <div class="contenido">
+        <div id="App" class="row pt-5">
+            <div class="col-md-4">
+                <div class="card" >
+                    <div class="card-header">
+                        <h4>Agrega un producto</h4>
+                    </div>
+                    <form id="producto-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Nombre del producto"
+                            class="form-control">
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="number" step="0.01" id="codigo" placeholder="Código del producto"
+                            class="form-control">
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="number" step="0.01" id="cantidad" placeholder="Cantidad del producto"
+                            class="form-control">
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="number" step="0.01" id="costo" placeholder="Costo del producto"
+                            class="form-control">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" name="posc" id="posicion" placeholder="Posición"
+                            class="form-control">
+                        </div>
+                        <br>
+                        <div class="agregar">
+                            <input type="button" id="agregar" value="Guardar" class="btn btn-primary btn-block">
+                        </div>
+                        <br>
+                        <div class="lista">
+                            <input type="button" id="lista" value="Mostrar Lista" class="btn btn-primary btn-block">
+                        </div>
+                        <br>
+                        <div class="listar-inverso">
+                            <input type="button" id="inverso" value="Listar En Orden Inverso" class="btn btn-primary btn-block">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="producto-list" class="col-md-8">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
